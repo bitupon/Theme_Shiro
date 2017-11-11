@@ -1,0 +1,265 @@
+/* 
+ * * * _navigation.scss
+ * * *
+ */
+
+.#{$sh}{
+	&-navigation{
+		$nav:&;
+		@extend #list;		
+		
+
+		.ms-core-listMenu-horizontalBox{
+			display: block;
+		}
+
+		.ms-core-listMenu-root {
+			@extend #list;
+			display: block;		
+    		float: none;
+			line-height: 1;
+			
+			> li{
+				position: relative;			
+				line-height: 1;
+				a{
+					float: left;
+				}
+
+				li {
+					&:last-child{
+						.ms-core-listMenu-item{					
+							padding-right: 0;	
+							margin-right: 0!important;						
+						}
+					}
+
+					&:hover,&.hover,&.hover-off{
+						> ul{
+							&.dynamic{
+								display: block;							
+								left: 0px!important;
+								overflow: inherit;
+							}	
+						}
+					}
+				}
+
+				&:hover,&.hover,&.hover-off{
+					> ul{
+						&.dynamic{
+							display: block;							
+							left: 0px!important;
+							overflow: inherit;
+						}	
+					}
+				}
+			}
+			
+
+			.ms-core-listMenu-item{
+
+				display: inline-block;			
+				text-decoration: none;
+				font-size: 14px;
+				transition: color $tr-medium;
+				border-width:0 0 2px 0!important;
+				padding: 15px 5px;
+				margin: 0 15px!important;
+				height: 49px;
+				line-height: 1em;		
+				position: relative;
+				color: #555555;
+				border-style: solid;
+				border-color: #fff;
+				text-transform: uppercase;
+				cursor:pointer;
+
+				&:hover{
+					color:  map-get($theme, pri-color-dk);
+					border-color:  map-get($theme, pri-color-dk);				
+				}
+				&.active,&.ms-core-listMenu-selected{
+					border-color: map-get($theme, pri-color-dk);
+					font-weight: 600;
+				}
+
+				+ ul{
+					&.dynamic{
+						$navMenu:&;
+						display: none;
+						position: absolute;			
+						top:46px!important;
+						background-color: #fff;
+						border-top: 2px solid map-get($theme, pri-color-dk);
+						border-bottom: solid 2px #777777;
+						width:200px;
+						@extend #ellipsis;
+						z-index: 10;
+						@extend #list;
+						box-shadow: none;
+						border-left:none;
+						border-right:none;
+						> li{
+							position: relative;
+							.ms-core-listMenu-item {	
+								display: block;
+								height: 34px;
+								line-height: 1em;
+								margin: 0!important;
+								padding: 9px 15px;
+								cursor: pointer;
+								transition: all $tr-medium;
+								color: #666666;
+								border:none;
+								float: none;
+								&:hover{
+									background-color: #efefef;					
+									color: #004d85;				
+								}
+
+								&:focused,&:active{
+									color: #004d85!important;
+								}
+
+							
+							}
+
+							&:hover,&.hover,&.hover-off{
+								> ul{
+									&.dynamic{
+										display: block;
+										top: -4px !important;
+										right: 0px !important;
+										overflow: inherit;
+									}
+								}
+							}												
+						}							
+					}
+				}			
+
+				.dynamic-children.additional-background{
+					padding: 0;
+					background-image: none;
+					&:before{
+						@extend .#{$sh}-icn-fa;
+						content: "\f107";
+						position: absolute;
+						right: -12px;
+						top: 16px;
+						font-size: 14px;
+					}
+				}
+			}			
+		}		
+	}
+}
+
+
+
+
+/*******    Phone ***********************/
+
+@media(max-width: 960px) {
+			
+	.#{$sh}{
+		&-navigation{
+			$nav:&;
+			background-color: map-get($theme, gray);
+				
+			.ms-core-listMenu-horizontalBox{			
+
+				ul,li{
+					display: block!important;	
+				}
+
+				ul{
+					padding:0;
+				}
+			}
+
+			.ms-core-listMenu-root {					
+				> li{						
+					
+					> a{
+						float: none;
+					}
+
+					ul {
+						li{
+							&:hover,&.hover,&.hover-off{
+								> ul{
+									&.dynamic{			
+										display: block!important;								
+										height: auto;
+									}	
+								}					
+							}
+						}
+					}
+				}				
+
+				.ms-core-listMenu-item{
+					//position: relative;
+					display: block;
+					padding: 11px 20px;				
+					margin: 0!important;
+					text-decoration: none;
+					//font-size: 14px;
+					font-weight: 400;
+					height: auto;
+					transition: color $tr-medium;
+					cursor: pointer;
+					float: none;
+
+					&:hover,&.active,&.ms-core-listMenu-selected{					
+						background-color:  map-get($theme, gray-hover)!important;								
+					}
+
+			
+
+					+ ul{
+						&.dynamic{
+							$navMenu:&;
+							display: none!important;
+							position: relative;			
+							top:0!important;
+							left: 0!important;
+							background-color: map-get($theme, gray-dk);
+							border:none;						
+							width:auto!important;
+							box-shadow: none;						
+							z-index: 10;						
+							height: 0;					
+
+							> li{
+								position: relative;
+								.ms-core-listMenu-item {	
+									display: block;
+									padding:10px 20px;
+									color: #fff!important;
+									cursor: pointer;
+									transition: all $tr-medium;
+									float: none;
+									&:hover,&:focus,&:active{
+										background-color: map-get($theme,gray-dk-hover)!important;												
+									}
+							
+								}																	
+							}								
+						}
+					}			
+
+					.dynamic-children.additional-background{					
+						&:before{							
+							right: 10px;
+							top: 10px;
+							font-size: 18px;
+						}
+					}
+				}			
+			}		
+		}
+	}
+}

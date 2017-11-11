@@ -1,0 +1,14 @@
+/*
+	* _table.scss - UI Table Component
+	*
+*/
+
+.#{$sh}{
+	&-table{
+
+
+        thead{
+            background-color: map-get($theme, gray);
+        }
+    }
+}

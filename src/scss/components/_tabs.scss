@@ -1,0 +1,45 @@
+/*
+	* _tabs.scss - UI Panel Component
+	*
+*/
+
+.#{$sh}{
+	&-tab{     
+        $tabs:&;
+        position: relative;  
+        margin-bottom: 20px;
+
+        &__item{
+           > .nav-link{               
+                border-radius: 0;
+                &.active{
+                    background-color:  map-get($theme, pri-color-dk);
+                }
+           } 
+        }
+
+        //Variations
+
+        &--light{
+           #{$tabs}__item{
+                > .nav-link{       
+                    &.active{
+                        background-color:  map-get($theme, gray);
+                        color:  map-get($theme, pri-color-dk);
+                    }
+                } 
+            }
+        }
+
+        &--bordered{
+             #{$tabs}__item{
+                > .nav-link{       
+                    &.active{
+                        background-color:  transparent;
+                        
+                    }
+                } 
+            }
+        }
+    }
+}

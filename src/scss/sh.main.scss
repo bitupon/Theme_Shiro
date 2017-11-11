@@ -1,0 +1,40 @@
+/*
+* @main.scss - main sass file
+*
+*/
+
+
+//Base Layout Styling and utilities
+@import "common/base";
+@import "common/utilities";
+@import "common/page";
+@import "common/module";
+@import "common/icons";
+@import "common/widgets";
+@import "common/sp_overrides";
+
+//Component Styling
+@import "components/header";
+@import "components/navigation";
+@import "components/forms";
+@import "components/forms.custom";
+@import "components/modal";
+@import "components/panel";
+@import "components/accordion";
+@import "components/tabs";
+@import "components/alert";
+@import "components/carousel";
+@import "components/ticker";
+@import "components/list";
+@import "components/tiles";
+@import "components/table";
+
+//Widget Styling
+@import "widgets/profile";
+@import "widgets/event";
+@import "widgets/calender";
+@import "widgets/weather";
+
+
+//Sharepoint Overrides
+@import "sp_overrides/navigation";

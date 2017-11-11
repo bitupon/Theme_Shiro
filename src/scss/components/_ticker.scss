@@ -1,0 +1,154 @@
+/*
+	* _ticker.scss - UI Ticker Component
+	*
+*/
+
+.#{$sh}{
+	&-ticker{
+        $ticker:&;  
+
+        background-color: #f3f4f5;
+        border: solid 1px #ececec;               
+        margin-bottom: 20px;
+        &__inner{           
+            height: 50px;           
+            border-top: none;
+            &-wrapper{
+                position: relative;
+                width: 1140px;
+                margin: auto;    
+                height: 50px;
+                padding:0 15px 0 0;
+            }
+        }
+
+        &__item{
+            height: 100%;                 
+        }
+
+        &__control{            
+            width: 20px;           
+            line-height: 50px;
+            top: 0;
+            right: 10px;
+            left: initial;
+            background: none;
+            background-image: none !important;
+            text-shadow: none;
+            color: #525c68 !important;
+            cursor:pointer;
+            text-shadow: 0 1px 2px rgba(0,0,0,.6);
+            z-index: 1000000;
+        
+
+            .fa{
+                font-size: 30px;
+            }
+
+            &.left,&.carousel-control-prev{
+                right: 30px;
+            }
+
+            &.right,&.carousel-control-next{
+                right: 10px;
+            }
+        }
+      
+        &__caption{                        
+            top: 0;           
+            left: 0;
+            right: 0;
+            padding: 15px;
+            height: 100%;
+
+            &-title{
+                display: table-cell;
+                padding:0;
+                margin:0;
+                text-align: left;
+                font-size: 16px;              
+                text-shadow: none;
+                font-weight: 100;
+                letter-spacing: 1px;
+                 @extend .ellipsis;
+            }
+            &-desc{
+                display: table-cell;
+                text-align: left;
+                text-shadow: none;
+                color:map-get($theme, pri-color)!important;
+                padding: 0 20px;
+                 @extend .ellipsis;
+            }
+        }
+
+        &__title{
+            position: relative;
+            display: inline-block;
+            width: 150px;
+            background-color: #D9534F;
+            height: 50px;
+            float: left;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+
+            + #{$ticker}__inner{               
+                display: inline-block;
+                width:calc(100% - 200px);               
+            }
+        }
+        
+
+        &--dark{
+            background-color: #002649;                   
+            border: none;
+          
+            #{$ticker}{
+                &__inner{
+                  
+                  
+                }
+
+                 &__caption{                       
+                    
+                    &-title{
+                        color:#fff!important;                        
+                    }
+                    &-desc{                      
+                        color:#fff!important;                        
+                    }
+                }
+
+                &__control{            
+                  
+                    color: #fff !important;
+                   
+                    text-shadow: 0 1px 2px rgba(0,0,0,.6);                 
+                }
+      
+            }
+             
+        }
+
+        &--sm{
+            #{$ticker}{
+                &__inner{
+                    height: 36px;
+                    &-wrapper{
+                        height: 36px;
+                    }
+                }
+
+                &__title{
+                    height: 36px;
+                    line-height: 36px;
+                }
+
+                &__caption{
+                    padding: 8px 15px;
+                }
+            }
+        }
+    }
+}

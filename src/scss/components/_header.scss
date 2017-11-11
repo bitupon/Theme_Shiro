@@ -1,0 +1,70 @@
+/*
+	* _header.scss - UI Header Component
+	*
+*/
+
+.#{$sh}-header{
+    $header:&;   
+    padding: 0 15px;
+
+    &__left{       
+        display: inline-block;
+        float: left;
+        height: 90px;      
+        box-sizing: border-box;
+        &:after{
+            @extend #after-clear;
+        }
+    }
+
+    &__right{       
+        display: inline-block;
+        float: right;
+      
+        &:after{
+            @extend #after-clear;
+        }
+    }
+
+    &__logo{
+        display: inline-block;
+        width: 100px;
+        height: 60px;
+        margin-top: 10px;
+
+        img{
+            @include square(100%);
+        }
+    }
+
+    &--boxed{      
+        width:1170px;
+        margin: auto;       
+    }
+
+    &:after{
+        @extend #after-clear;
+    }
+}
+
+@media(max-width: 960px) {
+    .#{$sh}-header{
+        $header:&;
+        &__left{       
+            display: block;
+            float: none;
+            height: 70px;      
+            
+        }
+
+        &__right{       
+            display: block;
+            float: none;
+        
+        }
+      
+        &--boxed{
+            width:auto;         
+        }
+    }
+}

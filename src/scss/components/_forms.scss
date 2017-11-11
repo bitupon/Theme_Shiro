@@ -1,0 +1,145 @@
+/*
+	* _forms.scss - UI Forms Component
+	*
+*/
+
+.#{$sh}-btn{    
+    border-radius: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+   
+   &--default{
+        background-color: map-get($theme, pri-color-dk);
+        color: #fff;
+        &:hover{
+             background-color: map-get($theme, pri-color-dk-hover);
+        }
+   }
+
+   &--outlined{
+        background-color: transparent;
+        border-color: map-get($theme, pri-color);
+        color: map-get($theme, pri-color);
+        &:hover{
+            color: #fff;
+             background-color: map-get($theme, pri-color-dk);
+        }
+   }
+
+    &:focus{
+        outline: none;
+        box-shadow: none;
+    }
+
+    &-link{
+        background: transparent;
+        color: map-get($theme, pri-color)!important;
+        padding: 0;
+        font-weight: 400;
+        font-size: 14px;
+        transition: color $tr-medium;
+
+        &:hover{
+            color:map-get($theme, pri-color-dk-hover)!important;
+        }
+
+        &:active,&:focus{
+            color: map-get($theme, pri-color)!important;
+            outline: none!important;
+            box-shadow: none;
+        }
+
+        &--primary{
+            
+            color: map-get($theme, sec-color)!important;
+            
+            &:hover{
+                color:map-get($theme, sec-color-dk-hover)!important;
+            }
+
+            &:active,&:focus{
+                color: map-get($theme, sec-color)!important;
+                outline: none!important;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.form{
+    &-group{
+        > label{
+            font-weight: 400;
+            text-transform: capitalize;
+            &.required{
+                &:after{
+                    content: "*";
+                    color: #b30000;
+                    font-weight: 600;
+                    margin-left: 2px;
+                }
+            }
+        }
+    }
+
+    &-control{
+        border-radius:0;
+        padding: 6px 12px!important;
+        border: 1px solid  map-get($theme, pri-color-dk);  
+        height: 32px;
+        line-height: 32px;
+        transition: all $tr-fast;    
+        &:focus{        
+            border: 1px solid  map-get($theme, pri-color-dk);
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+        }
+
+        //Sizes
+        &-sm{
+            height: 28px;
+            line-height: 28px; 
+        }
+        
+        &-md{
+            height: 36px;
+            line-height: 36px; 
+                 
+        }
+        
+        &-lg{
+            height: 50px;
+            line-height: 50px;                    
+        }       
+        
+
+        //Variations
+        &--borderless{
+             border: 1px solid map-get($theme, gray)!important;
+             background-color:  map-get($theme, gray) ;
+             background-clip: border-box;
+
+             &:focus{
+                border: 1px solid  map-get($theme, gray-hover) !important;
+                background-color:  map-get($theme, gray-hover) !important;
+                box-shadow: none;              
+            }
+        }
+
+        &--light{
+            border: 1px solid map-get($theme, gray-hover) !important;           
+             
+        }
+    }
+}
+
+
+
+textarea{
+    &.form-control{
+        max-width: 100%;
+        max-height: 150px;
+        min-height: 50px;
+    }
+}

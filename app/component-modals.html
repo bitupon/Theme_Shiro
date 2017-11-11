@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shiro - Intranet Offerings</title>
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="libs/weather-icons-master/css/weather-icons.min.css">
+	<link rel="stylesheet" href="libs/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+	<link rel="stylesheet" href="css/sh.main.css">
+
+	
+	<script src="libs/jquery/dist/jquery.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="libs/bootstrap/js/bootstrap.min.js"></script>		
+	<script src="libs/moment/min/moment.min.js"></script>
+	<script src="libs/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>		
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+	<main class="sh-main">
+		<!-- Start: Shiro Header-->
+		<header class="sh-header sh-header--boxed">
+			<div class="sh-header__left">
+				<div class="sh-header__logo">
+					<img src="./assets/sh-logo.png" alt="logo"/>
+				</div>
+			</div>			
+            <nav class="sh-header__right">
+				<div class="sh-nav-wrapper"> 
+					<ul class="sh-nav sh-nav--settings float-right m-t-2">
+						<li><a  class="sh-nav__item" href="home.html"><i class="fa fa-home m-r-1" aria-hidden="true"></i>Home</a></li>
+						<li><a href="" class="sh-nav__item">My Team Sites</a></li>					
+					</ul>
+					<span class="clearfix"></span>
+					<ul class="sh-nav m-t-2">
+						<li><a  class="sh-nav__item sh-nav__item--active" href="home.html">Cleab Build Site</a></li>
+						<li><a href="" class="sh-nav__item">News</a></li>
+						<li>
+							<a href="" class="sh-nav__item">UI <i class="fa fa-angle-down m-r-1" aria-hidden="true"></i></a>
+							<ul class="sh-nav__menu">
+								<li><a class="sh-nav__menu-item" href="component-forms-elements.html">Form Elements</a></li>
+								<li><a class="sh-nav__menu-item" href="component-custom-forms-elements.html">Custom Form Elements</a></li>						
+								<li><a class="sh-nav__menu-item" href="component-accordion.html">Accordion</a></li>
+								<li><a class="sh-nav__menu-item" href="component-alerts.html">Alerts</a></li>
+								<li><a class="sh-nav__menu-item" href="component-carousel.html">Carousel</a></li>
+								<li><a class="sh-nav__menu-item" href="component-sticker.html">Sticker</a></li>
+								<li><a class="sh-nav__menu-item" href="component-lists.html">Lists</a></li>
+								<li><a class="sh-nav__menu-item" href="component-modals.html">Modals</a></li>
+								<li><a class="sh-nav__menu-item" href="component-tabs.html">Tabs</a></li>
+								<li><a class="sh-nav__menu-item" href="component-tiles.html">Tiles</a></li>
+								<li><a class="sh-nav__menu-item" href="widget-calender.html">Calender Widget</a></li>
+								<li><a class="sh-nav__menu-item" href="widget-event.html">Event Widget</a></li>
+								<li><a class="sh-nav__menu-item" href="widget-profile.html">Profile Widget</a></li>
+								<li><a class="sh-nav__menu-item" href="widget-weather.html">Weather Widget</a></li>
+							</ul>
+						</li>
+						<li><a href="" class="sh-nav__item">Employee Directory</a></li>
+						<li><a href="" class="sh-nav__item">Dropdown</a></li>
+						<li><a href="" class="sh-nav__item">Finance</a></li> 
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<!-- End: Shiro Header-->
+		<div class="sh-content">
+			<!--Start: KR PageLayout -->
+			<div class="sh-page sh-page--boxed">
+				<div class="row">
+					<div class="col">
+						<button type="button" class="sh-btn btn btn-primary" data-toggle="modal" data-target="#exampleModal">Open modal</button>
+					
+
+						<div class="sh-modal modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="sh-modal__dialog modal-dialog" role="document">
+								<div class="sh-modal__content modal-content">
+									<div class="sh-modal__header modal-header">
+										<h5 class="sh-modal__title modal-title" id="exampleModalLabel">New message</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="sh-modal__body modal-body">
+										<form>
+										<div class="form-group">
+											<label for="recipient-name" class="form-control-label">Recipient:</label>
+											<input type="text" class="form-control" id="recipient-name">
+										</div>
+										<div class="form-group">
+											<label for="message-text" class="form-control-label">Message:</label>
+											<textarea class="form-control" id="message-text"></textarea>
+										</div>
+										</form>
+									</div>
+									<div class="sh-modal__footer modal-footer">
+										<button type="button" class="sh-btn btn btn-secondary" data-dismiss="modal">Close</button>
+										<button type="button" class="sh-btn btn btn-primary">Send message</button>
+									</div>
+								</div>
+							</div>
+						</div>				
+					</div>	
+									
+				</div>				
+			</div>
+			<!--End: KR PageLayout -->
+		</div>
+		<footer>
+
+		</footer>
+
+	</main>
+
+</body>
+</html>
+

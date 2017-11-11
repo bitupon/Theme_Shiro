@@ -1,0 +1,6 @@
+{
+  "title": 				"Shiro",
+  "version": 			"1.0.0",
+  "app": 				"./app/",
+  "deploy" : "./deploy/shiro" 
+}

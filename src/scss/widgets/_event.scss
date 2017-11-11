@@ -1,0 +1,29 @@
+/*
+	* _event.scss - UI Event Widget
+	*
+*/
+
+.#{$sh}{
+	&-event{
+		position: relative;
+		margin-bottom: 20px;
+		&__header{
+			font-size: 16px;
+			font-weight: 600;
+			margin-bottom: 5px;
+			@extend .ellipsis;
+			color: map-get($theme, pri-color-dk);
+		}
+
+		&__period{
+			color: map-get($theme, pri-color);
+			font-size: 12px;
+			font-weight: 600;
+		}
+
+		&__date{
+			font-weight: 600;
+			letter-spacing: 1px;
+		}
+	}	
+}

@@ -1,0 +1,47 @@
+/*
+	* _tiles.scss - UI Block Component
+	*
+*/
+
+.#{$sh}-tile{	
+    $tile:&;
+    position: relative;
+    display: inline-block;
+    //width: 150px;
+    //height: 150px;
+    @include square(138px);
+    margin: 0 auto 10px auto;
+    overflow: hidden;
+    background-color: map-get($theme, gray);
+    float: left;
+    cursor:pointer;
+
+    &-wrapper{
+
+    }
+
+    &__img{
+
+    }
+
+    &__overlay{
+        position: absolute;
+        width: 100%;
+        top: 90px;
+        height: 100%;
+        -webkit-transition: all $tr-medium ease-in-out;
+        -o-transition: all $tr-medium ease-in-out;
+        transition: all $tr-medium ease-in-out;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 14px;
+        padding: 10px 12px;
+        margin: 0;
+    }
+
+    &:hover{
+        #{$tile}__overlay{
+            top: 0;
+        }
+    }
+}

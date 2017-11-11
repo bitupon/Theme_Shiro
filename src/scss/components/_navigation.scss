@@ -1,0 +1,165 @@
+/*
+	* navigation.scss - UI Navigation Component
+	*
+*/
+
+.#{$sh}{
+	&-nav{
+		$nav:&;	
+		
+		@extend #list;
+		&:after{
+		    @extend #after-clear
+		}
+
+		
+		> li{
+			position: relative;
+			float: left;	
+
+			&:last-child{
+				#{$nav}__item{					
+					padding-right: 0;	
+					margin-right: 0;						
+				}
+			}
+
+			&:hover{			
+				> #{$nav}__menu{
+					display: block;
+				}
+			}			
+		}
+
+		#{$nav}__item{
+			display: inline-block;			
+			text-decoration: none;
+			font-size: 14px;
+			transition: color $tr-medium;
+			border-width: 0 0 2px 0;
+			padding: 15px 5px;
+			margin: 0 15px;
+			height: 49px;
+			line-height: 1em;		
+			position: relative;
+			color: #555555;
+			border-style: solid;
+			border-color: #fff;
+			text-transform: uppercase;
+
+
+			&:hover{
+				color:  map-get($theme, pri-color-dk);
+				border-color:  map-get($theme, pri-color-dk);			
+			}
+
+			&--active{				
+				border-color:  map-get($theme, pri-color-dk);
+				font-weight: 600;
+			}
+					
+		}
+
+		#{$nav}__menu{
+			$navMenu:&;
+			display: none;
+			position: absolute;			
+			top:46px;
+			background-color: #fff;
+			border-top: 2px solid map-get($theme, pri-color-dk);
+			border-bottom: solid 2px #777777;
+			width:200px;
+			@extend #ellipsis;
+			z-index: 10;
+			@extend #list;
+
+			&-item{
+				display: block;
+				height: 34px;
+				line-height: 1em;
+				margin: 0;
+				padding: 9px 15px;
+				cursor: pointer;
+				transition: all $tr-medium;
+				color: #666666;
+				&:hover{
+					background-color: #efefef;					
+					color: #004d85;		
+				}
+
+				&:focused,&:active{
+					color: #004d85!important;
+				}
+			}
+			
+		}
+
+		&#{$nav}--settings{
+			#{$nav}__item{
+				padding: 0px 14px;
+				font-size: 11px;			
+				border-right: solid 1px #ccc;
+				text-transform: uppercase;
+				height: auto;
+				border-bottom: none;
+				margin: 0;
+						
+			}
+
+			li{
+				&:last-child{
+					display: none;
+				}
+
+				&:nth-last-child(2) {
+					#{$nav}__item{
+						border-right: none;		
+						padding-right: 0;									
+					}				
+				}
+			}
+		}
+	}
+
+}
+
+@media(max-width: 960px) {
+   
+	.#{$sh}{
+		&-nav{
+			$nav:&;	
+
+			&#{$nav}--settings{				
+				#{$nav}__item{
+					padding: 0px 14px;
+					font-size: 11px;			
+					border-right: solid 1px #ccc;
+					text-transform: uppercase;
+					height: auto;
+					border-bottom: none;
+					margin: 0;
+							
+				}
+
+				li{
+					&:last-child{						
+						display: inline-block;		
+						#{$nav}__item{
+							border-right: none;		
+							padding-right: 0;									
+						}											
+					}
+
+					&:nth-last-child(2) {
+						#{$nav}__item{
+							border-right:  solid 1px #ccc;
+							padding-right: 14px;									
+						}	
+						
+					}
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,33 @@
+/*
+	* _variables.scss 
+	*
+*/
+
+
+ $sh:"sh";
+
+ $font-gray:#8d8d8d;
+
+
+//Transition Speed
+ $tr-slow:.2s;
+ $tr-medium:.5s;
+ $tr-fast:.9s;
+
+
+ //Font $pri-color
+ $f-color: #525c68;
+ $f-color-light:#758292;
+
+ $theme:(
+     pri-color :#034e8e,
+     pri-color-dk :#002649,
+     pri-color-dk-hover:#222527,
+     sec-color: #d9534f,
+     sec-color-dk:#d9534f, //Need to update
+     sec-color-dk-hover:#d9534f, //Need to update
+   gray: #edeef0,
+     gray-hover: #dedede,
+     gray-dk: #707070,
+     gray-dk-hover: #5d5d5d
+ )

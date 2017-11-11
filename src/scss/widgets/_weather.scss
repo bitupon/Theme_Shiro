@@ -1,0 +1,59 @@
+/*
+	* _weather.scss - UI Weather Widget
+	*
+*/
+
+.#{$sh}-weather{
+	$weather:&;
+	display: block;
+    position: relative;   
+	padding: 10px;
+
+    &:after{
+		@extend #after-clear;
+	}
+
+	&__details{
+		display: table;
+	}
+
+	&__pic{
+		display: table-cell;
+		color: map-get($theme,gray-dk)!important;
+    	font-size: 45px;
+		text-align: center;
+	}
+
+	&__location{	
+		display: table-cell;
+		position: relative;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 14px;
+		text-align: center;
+		vertical-align: middle;
+		padding-left: 20px;
+		@extend .ellipsis;		
+	}
+
+	&__temp{	
+		display: table-cell;
+		position: relative;
+		font-size: 30px;
+    	font-weight: 400;	
+		text-align: center;
+		vertical-align: middle;	
+		color: map-get($theme,pri-color)!important;
+		@extend .ellipsis;		
+	}
+
+	&__date{
+		position: relative;
+		font-weight: 100;		
+		letter-spacing: 1px;
+		font-size: 14px;
+		@extend .ellipsis;	
+		
+	}
+}

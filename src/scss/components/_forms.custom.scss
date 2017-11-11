@@ -1,0 +1,242 @@
+/*
+	* _forms.custom.scss - UI Forms Component
+	*
+*/
+
+// Input Group Addon
+.#{$sh}-input{
+    &-group{
+        $inpGrp:&;
+        .input-group-addon {
+            border-radius:0;
+            background:map-get($theme, pri-color-dk);
+            border: none;
+            color: #fff;
+            > button{
+                background: transparent;
+                border: none;
+                outline: none;               
+                color: #fff;
+                padding: 0;
+                min-width: 0;
+                margin: 0;
+                font-size: inherit;
+                &[disabled]{
+                    .fa{
+                        color:#ccc;
+                    }
+                }
+            }
+
+             + .input-group-addon{
+                 border-left:solid 1px map-get($theme, pri-color);
+             }
+        }       
+
+        .input-group-btn{
+            border-radius:0;
+            background:map-get($theme, pri-color-dk);
+            > button{
+                background: transparent;
+                border:none;
+
+                &:focus,&:hover,&:active{
+                     // background-color:map-get($theme, pri-color-dk);
+                     // outline: none;
+                      //box-shadow: none;
+                }
+
+                + button{
+                    border-left:solid 1px map-get($theme, pri-color);
+                     &:focus,&:hover,&:active{
+                        //background-color:map-get($theme, pri-color-dk);
+                        //border-left:solid 1px map-get($theme, pri-color-dk);
+                    }
+                }
+            }
+        } 
+
+        .dropdown-menu{
+            border-radius:0;
+        } 
+
+        //Variations
+        &--light{
+
+            .form-control{
+                 border:solid 1px map-get($theme, gray-hover);
+            }
+
+            .input-group-addon {               
+                background: map-get($theme, gray-dk) ;    
+                
+                + .input-group-addon{
+                    border-left:solid 1px map-get($theme, gray-hover);
+                }
+            }       
+
+            .input-group-btn{
+             
+                background:map-get($theme, gray-dk);
+                > button{                
+                    + button{
+                        border-left:solid 1px map-get($theme, gray-hover);                       
+                    }
+                }
+            }            
+        }
+
+
+         &--borderless{
+            .form-control{
+                border:solid 1px map-get($theme, gray);
+                background-color: map-get($theme, gray);
+                background-clip: border-box;
+                &:focus{
+                    border: 1px solid map-get($theme, gray-hover) !important;
+                    background-color: map-get($theme, gray-hover)!important;
+                    box-shadow: none;              
+                }
+            }
+
+            .input-group-addon {               
+                background: map-get($theme, gray-dk) ;    
+                
+                + .input-group-addon{
+                    border-left:solid 1px map-get($theme, gray);
+                }
+            }       
+
+            .input-group-btn{             
+                background:map-get($theme, gray-dk);
+                > button{                
+                    + button{
+                        border-left:solid 1px map-get($theme, gray);                       
+                    }
+                }
+            } 
+        }
+    }
+}
+
+
+// Custom Controls
+.#{$sh}-custom{
+    $custCont:&;
+    //Select
+    &-select{
+        height: 32px!important;
+        line-height: 1;
+
+        &--light{
+             border:solid 1px map-get($theme, gray-hover);
+
+             &:focus{
+                 border:solid 1px map-get($theme, gray);
+             }
+        }
+
+        &--borderless{          
+            border:solid 1px map-get($theme, gray);
+            background-color: map-get($theme, gray);
+            background-clip: border-box;
+            &:focus{
+                border: 1px solid map-get($theme, gray-hover) !important;
+                background-color: map-get($theme, gray-hover)!important;
+                box-shadow: none;              
+            }
+        
+        }
+    }
+    // File Browse
+    &-file{
+        height: 32px;
+        line-height: 32px;
+        .custom-file-input{
+            height: 32px;
+        }
+        .custom-file-control{
+            border-radius: 0;
+            padding: 6px 12px !important;
+            border: 1px solid map-get($theme, pri-color-dk)!important;
+            box-shadow: none;
+            background-color: #fff;
+            height: 32px;          
+            transition: all 0.9s;
+
+            &:before{
+                height: 32px;
+                padding: 6px 12px !important;
+                color: #fff;
+                background-color:map-get($theme, pri-color-dk);
+                border-radius: 0;
+            }
+        }
+
+         &--light{
+             .custom-file-control{              
+                border: 1px solid map-get($theme, gray-hover)!important;
+                background-color: #fff;            
+
+                &:before{                  
+                    color: #fff;
+                    background-color:map-get($theme, gray-dk);                  
+                }
+            }
+
+
+        }
+
+        &--borderless{   
+             .custom-file-control{              
+                border: 1px solid map-get($theme, gray)!important;
+                background-color: map-get($theme, gray);            
+
+                &:before{                  
+                    color: #fff;
+                    background-color:map-get($theme, gray-dk);                  
+                }
+             }        
+        }
+
+    }
+
+    //Checkbox
+    &-checkbox{
+        .custom-control-indicator{
+            border-radius: 0;
+
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        .custom-control-input{
+            &:checked{
+                ~ .custom-control-indicator{
+                   background-color:map-get($theme, pri-color-dk);
+                }
+            }
+
+        }
+    }
+
+    //Radio
+    &-radio{
+        .custom-control-indicator{          
+
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        .custom-control-input{
+            &:checked{
+                ~ .custom-control-indicator{
+                   background-color:map-get($theme, pri-color-dk);
+                }
+            }
+
+        }
+    }
+}

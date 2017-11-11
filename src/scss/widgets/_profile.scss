@@ -1,0 +1,41 @@
+/*
+	* _profile.scss - UI Profile Widget
+	*
+*/
+.#{$sh}-profile{
+	$profile:&;
+	display: inline-block;
+	position: relative;
+    &:after{
+		@extend #after-clear;
+	}
+
+	&__pic{
+		display: inline-block;
+		float: left;
+		@include square(150px);    
+
+	    img{
+	    	height: 100%;
+			width:100%;
+	    }   
+	}
+	&__details{
+		display: inline-block;
+		float: left;
+		padding: 15px 0 15px 15px;
+		width: 150px;
+		
+
+		#{$profile}__name{
+			color:map-get($theme, pri-color);
+			font-size: 18px;
+    		font-weight: 600;			
+		}
+
+		#{$profile}__desc{
+			padding: 15px 0;
+    		max-height: calc(100% - 60px);
+		}
+	}
+}

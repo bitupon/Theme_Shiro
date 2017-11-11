@@ -1,0 +1,49 @@
+/*
+	* _panel.scss - UI Panel Component
+	*
+*/
+
+.#{$sh}{
+	&-panel{
+		$panel:&;
+		border-radius: 0;			
+		margin-bottom: 20px;
+    	background-color: #fff;
+	
+		.panel{
+			&-heading{
+				border-bottom: 1px dotted #e4e9f0;
+   				margin: 0 0 10px 0;	
+			}
+
+			&-title{		
+				position: relative;		
+			}
+
+			&-footer{
+				background: transparent;
+				margin: 0px 15px;				
+				padding: 0;
+			}
+
+			&-body{
+				
+			}
+			
+		}	
+
+		h3.panel-title{
+			font-size: 21px;
+			margin-top: 0;
+			margin-bottom: 0;
+			padding-bottom: 5px;
+			display: inline-block;
+			border-bottom: 2px solid #002649;
+			color: #444!important;
+
+			
+		}
+
+		
+	}
+}
